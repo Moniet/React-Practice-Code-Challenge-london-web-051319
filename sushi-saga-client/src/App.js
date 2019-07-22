@@ -26,7 +26,7 @@ class App extends Component {
 
   selectFour = () => {
     const { selectedSushisNumber, sushis } = this.state;
-    const noMoreSushis = (selectedSushisNumber === sushis.length);
+    const noMoreSushis = ((selectedSushisNumber + 4) === sushis.length);
 
     this.setState(prevState => ({
       selectedSushisNumber: noMoreSushis ? 0 : (prevState.selectedSushisNumber + 4)
